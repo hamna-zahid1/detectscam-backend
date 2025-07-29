@@ -1,4 +1,4 @@
-import cors from 'cors';
+corsimport cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import { Groq } from 'groq-sdk';
@@ -6,10 +6,7 @@ import { Groq } from 'groq-sdk';
 dotenv.config();
 
 const app = express();
-app.use(cors({
-  origin: 'https://detectscam.vercel.app/', // Replace with your React app's URL
-  methods: ['POST']
-}));
+app.use(cors({ origin: '*', methods: ['POST'] }));
 app.use(express.json());
 
 const groq = new Groq({
