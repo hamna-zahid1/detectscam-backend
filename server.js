@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:5173', // Replace with your React app's URL
+  origin: 'https://detectscam.vercel.app/', // Replace with your React app's URL
   methods: ['POST']
 }));
 app.use(express.json());
